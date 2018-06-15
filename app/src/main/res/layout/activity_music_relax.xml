@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MusicRelaxActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/relax_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/cycler_img"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="start|center"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_blacklist_avatar"
+            android:shadowColor="@color/colorAccent"
+            android:shadowRadius="15.0"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="1000"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:progressBarImage="@drawable/loadimg"
+            fresco:progressBarImageScaleType="centerCrop"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#dadada"
+            fresco:roundingBorderWidth="0.1dp" />
+
+        <SeekBar
+            android:id="@+id/pro_for"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:max="100" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/music_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Audio-Artist"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NA:NA/NA:NA"
+                android:textColor="#6d6d6d"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ctrl"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:src="@drawable/btn_radio_fm_play_n" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
